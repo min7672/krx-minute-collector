@@ -289,7 +289,7 @@ def main():
                 continue
 
             print(f"[{i+1}/{len(codes_all)}] {code} {name} -> collecting...", flush=True)
-            
+            save_cp(i+1, codes_all)
             #수집로직
             df = collect_1min_2years(code)
 
@@ -302,8 +302,6 @@ def main():
         except Exception as e:
             print(f" FAILED ({e})")
 
-        # 체크포인트 갱신(다음은 i+1부터)
-        save_cp(i+1, codes_all)
         time.sleep(0.15)
 
 # ----------------- 메인-END------------------
