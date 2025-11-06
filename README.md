@@ -56,7 +56,7 @@ KOSPI·KOSDAQ 전 종목의 심볼 정보를 네이버에서 크롤링한 뒤, �
 1. **가상환경 활성화**
 ```bash
 python -m venv venv
-source venv/Scripts/activate  # (Windows PowerShell)
+source venv/Scripts/activate
 pip install -r requirements.txt
 ```
 2. **종목 코드 수집**
@@ -75,7 +75,7 @@ python runner_watch.py
 - Creon Plus 로그인 및 연결 상태 확인 (CpCybos.IsConnect == 1)
 - API 호출 제한(13회/60초)을 우회하지 않도록 주의
 - 종목 수가 많을 경우 장시간 실행 필요
-- 해당 코드들은 네트워크, API 상태, 네이버 html수정에 동작하지 않을 수 있음
+- 해당 코드들은 대신증권 API 변동, 네이버 html 수정에 의해 동작하지 않을 수 있음
 
 ## 📂 출력 데이터 형식
 
